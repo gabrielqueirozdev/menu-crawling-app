@@ -1,0 +1,49 @@
+{
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    },
+    "require": ["tsconfig-paths/register"]
+  },
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es2021",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "rootDirs": [
+      "src"
+    ],
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "incremental": true,
+    "baseUrl": ".",
+    "typeRoots": [
+      "src/@types",
+      "./node_modules/@types"
+    ],
+    "paths": {
+      "@presentation/*": [
+        "src/presentation/*"
+      ],
+      "@main/*": [
+        "src/main/*"
+      ],
+      "@middlewares/*": [
+        "src/middlewares/*"
+      ],
+    },
+    "strictPropertyInitialization": false
+  },
+  "include": [
+    "src/**/*",
+    "@types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
